@@ -3,78 +3,82 @@ title: Install Sass
 layout: layout_1_column
 ---
 
-.features
-  %h2 There are a couple of ways to start using&nbsp;Sass:
-  %ol
-    %li.gui-application
-      %h3 1. Applications
-      %p There are a a good many applications that will get you up and running with Sass in a few minutes for Mac, Windows, and Linux. You can download most of the applications for free but a few of them are paid apps <small>(and totally worth it)</small>.
+- content_for :introduction do
+  Whether you are a Developer or a Designer there are tools for you to start using Sass
 
-      / The applications are listed in alphabetical order. As new applications are released they should be added to the list.
-      %ul
-        %li
-          = link_to "CodeKit", "http://incident57.com/codekit/"
-          %span.paid-icon
-          %span.mac-icon
-        %li
-          = link_to "Compass", "http://compass.handlino.com/"
-          %span.paid-icon
-          %span.mac-icon
-          %span.windows-icon
-          %span.linux-icon
-        %li
-          = link_to "Koala", "http://koala-app.com/"
-          %span.mac-icon
-          %span.windows-icon
-          %span.linux-icon
-        %li
-          = link_to "LiveReload", "http://livereload.com/"
-          %span.mac-icon
-          %span.windows-icon
-        %li
-          = link_to "Prepros", "http://alphapixels.com/prepros/"
-          %span.mac-icon
-          %span.windows-icon
-        %li
-          = link_to "Scout", "http://mhs.github.io/scout-app/"
-          %span.mac-icon
-          %span.windows-icon
+- content_for :section_bottom do
+  .features
+    %h2 There are a couple of ways to start using&nbsp;Sass:
+    %ol
+      %li.gui-application
+        %h3 1. Applications
+        %p There are a a good many applications that will get you up and running with Sass in a few minutes for Mac, Windows, and Linux. You can download most of the applications for free but a few of them are paid apps <small>(and totally worth it)</small>.
 
-    %li.command-line-unix
-      %h3 2. Command Line      
+        / The applications are listed in alphabetical order. As new applications are released they should be added to the list.
+        %ul
+          %li
+            = link_to "CodeKit", "http://incident57.com/codekit/"
+            %span.paid-icon
+            %span.mac-icon
+          %li
+            = link_to "Compass", "http://compass.handlino.com/"
+            %span.paid-icon
+            %span.mac-icon
+            %span.windows-icon
+            %span.linux-icon
+          %li
+            = link_to "Koala", "http://koala-app.com/"
+            %span.mac-icon
+            %span.windows-icon
+            %span.linux-icon
+          %li
+            = link_to "LiveReload", "http://livereload.com/"
+            %span.mac-icon
+            %span.windows-icon
+          %li
+            = link_to "Prepros", "http://alphapixels.com/prepros/"
+            %span.mac-icon
+            %span.windows-icon
+          %li
+            = link_to "Scout", "http://mhs.github.io/scout-app/"
+            %span.mac-icon
+            %span.windows-icon
 
-      #install-ruby-linux
-        %strong 1. Linux
-        %p If you're using a distribution of Linux, you'll need to install Ruby first. You can use --something--, or --something--, or --something else--.
+      %li.command-line-unix
+        %h3 2. Command Line
 
-      #install-ruby-windows
-        %strong 1. Windows
-        %p Before you start using Sass you will need to install Ruby. The fastest way to get Ruby on your Windows computer is to use <a href="http://www.rubyinstaller.org">Ruby Installer</a>. It's a single-click installer that will get everything set up for you super fast.
+        #install-ruby-linux
+          %strong 1. Linux
+          %p If you're using a distribution of Linux, you'll need to install Ruby first. You can use --something--, or --something--, or --something else--.
 
-        %p Along with Ruby the installer will also install a Ruby command line application that you will let you use the Ruby libraries. Open --application name--.
+        #install-ruby-windows
+          %strong 1. Windows
+          %p Before you start using Sass you will need to install Ruby. The fastest way to get Ruby on your Windows computer is to use <a href="http://www.rubyinstaller.org">Ruby Installer</a>. It's a single-click installer that will get everything set up for you super fast.
 
-      #install-ruby-mac
-        %strong 1. Mac
-        %p If you prefer the command line over an application then getting Sass set up is a fairly quick process. Sass has a Ruby dependency but if you're using a Mac, congratulations, Ruby comes pre-installed. 
+          %p Along with Ruby the installer will also install a Ruby command line application that you will let you use the Ruby libraries. Open --application name--.
 
-      %p Here's the quickest way we've found to start using Sass by using the command line:
+        #install-ruby-mac
+          %strong 1. Mac
+          %p If you prefer the command line over an application then getting Sass set up is a fairly quick process. Sass has a Ruby dependency but if you're using a Mac, congratulations, Ruby comes pre-installed.
 
-      %ol
-        %li 
-          %p <strong>2. Open your command line application.</strong> On the Mac the Terminal.app comes installed by default. It's located in your "Utilities" folder.
-        %li
-          %p <strong>3. Install Sass.</strong> Ruby uses Gems to manage it's various packages of code like Sass. In your open terminal window type:
-          %pre
-            :preserve
-              gem install sass
-          %p This will install Sass and any dependencies for you. It's pretty magical. 
-        %li
-          %p <strong>4. Double-check.</strong> You should now have Sass installed, but it never hurts to double-check. In your terminal application you can type:
-          %pre
-            :preserve
-              sass -v
-          %p It should return <code>Sass #{data.version.number} (#{data.version.name})</code>. Congratulations! You've successfully installed Sass.
-        %li
-          %p <strong>5. Go and play.</strong> If you're brand new to Sass we've set up some resources to help you learn pretty darn quick.
+        %p Here's the quickest way we've found to start using Sass by using the command line:
 
-      = link_to "Learn Sass", "/learn-sass", :class => "button primary"
+        %ol
+          %li
+            %p <strong>2. Open your command line application.</strong> On the Mac the Terminal.app comes installed by default. It's located in your "Utilities" folder.
+          %li
+            %p <strong>3. Install Sass.</strong> Ruby uses Gems to manage it's various packages of code like Sass. In your open terminal window type:
+            %pre
+              :preserve
+                gem install sass
+            %p This will install Sass and any dependencies for you. It's pretty magical.
+          %li
+            %p <strong>4. Double-check.</strong> You should now have Sass installed, but it never hurts to double-check. In your terminal application you can type:
+            %pre
+              :preserve
+                sass -v
+            %p It should return <code>Sass #{data.version.number} (#{data.version.name})</code>. Congratulations! You've successfully installed Sass.
+          %li
+            %p <strong>5. Go and play.</strong> If you're brand new to Sass we've set up some resources to help you learn pretty darn quick.
+
+        = link_to "Learn Sass", "/learn-sass", :class => "button primary"

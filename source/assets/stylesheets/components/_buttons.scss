@@ -3,6 +3,9 @@ $pseudos: "&:hover", "&:focus", "&:active", "&.active";
 .primary {
   background-color: $color-primary;
   color-border: darken($color-primary, 5);
+  color: #fff;
+  padding: .1em .4em;
+  @include border-radius(4px);
 
   &,
   #{$pseudos} { color: $color-text-strong-invert; }
