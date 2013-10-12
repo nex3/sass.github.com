@@ -1,9 +1,21 @@
 .page-header {
   @include trailer;
   @include transition-property(padding);
-  background: $color-background;
   border-color: $color-border;
 
   &,
   a { color: $color-accent; }
+  .index & h1 {
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 205px;
+      height: 378px;
+      background: url(/assets/images/illustrations/super-sass-woman.png);
+      left: 0;
+      top: 10px;
+    }
+  }
 }

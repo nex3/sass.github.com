@@ -16,13 +16,14 @@
       = partial "layouts/regions/browsehappy"
       = partial "layouts/regions/alert"
       .pop-stripe
-      = partial "layouts/regions/banner"
-      = partial "layouts/regions/page_header"
+      .hero
+        = partial "layouts/regions/banner"
+        = partial "layouts/regions/page_header"
 
-      =yield
+        =yield
 
       .alert.release
-        .container 
+        .container
           %ul
             %li Current Release: #{data.version.name} (#{data.version.number})
             %li=link_to "Release Notes", "#"
